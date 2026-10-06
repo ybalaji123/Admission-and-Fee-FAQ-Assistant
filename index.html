@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions & Fee Assistant | Kalasalingam Academy of Research and Education</title>
+  <meta name="description" content="Official Admission, Scholarship & Fee Inquiry Portal for Kalasalingam Academy of Research and Education (KARE). Ask questions regarding B.Tech, Law, Allied Health, Agriculture, Fees and Scholarships.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT STRIP -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-info">
+        <span>📞 Admission Helpline: <strong>+91 7397760760 / 04563 289042</strong></span>
+        <span>✉️ Email: <strong>admission@klu.ac.in</strong></span>
+      </div>
+      <div class="top-links">
+        <a href="https://paco.kalasalingam.ac.in/login" target="_blank">Parent Login</a>
+        <span>|</span>
+        <a href="https://kalvi.kalasalingam.ac.in/" target="_blank">Student Login</a>
+        <span>|</span>
+        <a href="https://www.kalasalingam.ac.in/faculty-login/" target="_blank">Faculty Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN UNIVERSITY BRAND HEADER -->
+  <header class="header-main">
+    <div class="header-container">
+      <a href="https://www.kalasalingam.ac.in/admissions/" class="logo-brand">
+        <div class="logo-emblem">KARE</div>
+        <div class="brand-titles">
+          <h1>KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION</h1>
+          <p>(Deemed to be University Under Section 3 of UGC Act 1956) • Anand Nagar, Krishnankoil</p>
+        </div>
+      </a>
+
+      <div class="header-accreditation">
+        <div class="accred-badge">
+          NAAC <strong>A++</strong> GRADE
+        </div>
+        <div class="accred-badge">
+          NIRF <strong>TOP 50</strong> RANKED
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-menu">
+    <div class="nav-menu-container">
+      <ul class="nav-tabs">
+        <li class="nav-tab-item">
+          <button class="active" data-tab="tabChat">
+            💬 Admission Helpdesk Assistant
+          </button>
+        </li>
+        <li class="nav-tab-item">
+          <button data-tab="tabCalc">
+            🧮 Fee & Scholarship Calculator
+          </button>
+        </li>
+        <li class="nav-tab-item">
+          <button data-tab="tabCourses">
+            📚 Academic Programs Offered
+          </button>
+        </li>
+        <li class="nav-tab-item">
+          <button data-tab="tabFaq">
+            ❓ Frequently Asked Doubts (FAQ)
+          </button>
+        </li>
+      </ul>
+
+      <a href="https://apply.kalasalingam.ac.in/" target="_blank" class="btn-apply-header">
+        Apply Online 2026–27
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- OFFICIAL NOTICE BANNER -->
+    <div class="notice-banner">
+      <div>
+        <div class="notice-title">Admissions Open for Academic Session 2026–2027</div>
+        <div class="notice-sub">Explore B.Tech, B.Arch, Law, Allied Health, Agriculture, BBA/BCA, MBA, MCA & M.Tech Programs with up to 100% Merit Scholarships!</div>
+      </div>
+      <div>
+        <a href="https://www.kalasalingam.ac.in/wp-content/uploads/2025/12/Brochure2026.pdf" target="_blank" style="background:#002B49; color:#fff; text-decoration:none; padding:8px 14px; border-radius:4px; font-size:13px; font-weight:700;">Download 2026 Brochure</a>
+      </div>
+    </div>
+
+    <!-- TAB 1: ADMISSION HELPDESK CHATBOT -->
+    <div id="tabChat" class="tab-panel active">
+      <div class="chat-layout">
+        
+        <!-- Main Chat Box -->
+        <div class="portal-card">
+          <div class="portal-card-header">
+            <div class="portal-card-title">
+              <span class="status-badge"></span>
+              KARE Admissions Inquiry Helpdesk
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button id="exportBtn" style="background:transparent; border:1px solid rgba(255,255,255,0.4); color:#fff; padding:4px 8px; border-radius:4px; font-size:12px; cursor:pointer;">Export Log</button>
+              <button id="clearBtn" style="background:transparent; border:1px solid rgba(255,255,255,0.4); color:#fff; padding:4px 8px; border-radius:4px; font-size:12px; cursor:pointer;">Clear</button>
+            </div>
+          </div>
+
+          <!-- Chat Box Messages -->
+          <div id="chatBody" class="chat-box">
+            <!-- Messages inserted via JavaScript -->
+          </div>
+
+          <!-- Quick Topic Pills -->
+          <div class="quick-topics">
+            <span style="font-size:11px; font-weight:700; color:var(--klu-navy); align-self:center;">Quick Inquiries:</span>
+            <button class="topic-btn" data-prompt="What is B.Tech CSE tuition fee and scholarship?">B.Tech Tuition Fees</button>
+            <button class="topic-btn" data-prompt="How can I get 100% scholarship based on JEE Main rank or 12th PCM marks?">100% Scholarship Rules</button>
+            <button class="topic-btn" data-prompt="What are the hostel room options and mess fee structure?">Hostel & Mess Charges</button>
+            <button class="topic-btn" data-prompt="What is the eligibility for B.Sc Allied Health Sciences and Agriculture?">Allied Health & Agri Eligibility</button>
+            <button class="topic-btn" data-prompt="Tell me about GATE qualified stipend for M.Tech students">M.Tech GATE Stipend (₹12,500/mo)</button>
+            <button class="topic-btn" data-prompt="What are the admission office contact phone numbers and address?">Admission Desk Contact</button>
+          </div>
+
+          <!-- Input Panel -->
+          <div class="chat-input-panel">
+            <div class="input-group">
+              <input type="text" id="chatInput" class="form-control-input" placeholder="Type your admission or fee question here (e.g., What is B.Tech CSE fee?)..." autocomplete="off">
+              <button id="micBtn" style="background:#E9ECEF; border:1px solid #DEE2E6; padding:0 12px; border-radius:4px; cursor:pointer;" title="Voice Search">🎤</button>
+              <button id="sendBtn" class="btn-send">Send Inquiry</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Panel -->
+        <div class="sidebar-panel">
+          <div class="sidebar-widget">
+            <div class="sidebar-widget-header">
+              📍 Admission Helpdesk Office
+            </div>
+            <div class="contact-list-item">
+              <div>
+                <strong>Location:</strong><br>
+                Kalasalingam Academy of Research and Education, Anand Nagar, Krishnankoil-626126, Tamil Nadu.
+              </div>
+            </div>
+            <div class="contact-list-item">
+              <div>
+                <strong>Office Phone:</strong><br>
+                +91 7397760760 / 04563 289042
+              </div>
+            </div>
+            <div class="contact-list-item">
+              <div>
+                <strong>Email Address:</strong><br>
+                admission@klu.ac.in
+              </div>
+            </div>
+            <div class="contact-list-item">
+              <div>
+                <strong>Office Timings:</strong><br>
+                9:00 AM to 5:00 PM (Monday to Saturday)
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <div class="sidebar-widget-header">
+              🗓️ Important Admission Details
+            </div>
+            <ul style="font-size:13px; color:var(--text-secondary); padding-left:18px;">
+              <li><strong>Application Portal:</strong> <a href="https://apply.kalasalingam.ac.in/" target="_blank" style="color:var(--klu-blue);">apply.kalasalingam.ac.in</a></li>
+              <li style="margin-top:6px;"><strong>Entrance Exam:</strong> KUEE / JEE Main / NATA / CLAT / GATE</li>
+              <li style="margin-top:6px;"><strong>Application Fee:</strong> ₹600 (Indian Resident) / $50 USD (NRI/Foreign)</li>
+              <li style="margin-top:6px;"><strong>Hostel Booking:</strong> Allotment on First-Come, First-Served basis upon admission</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: FEE CALCULATOR -->
+    <div id="tabCalc" class="tab-panel">
+      <div class="portal-card" style="padding:25px;">
+        <h2 style="font-size:18px; font-weight:700; color:var(--klu-navy); margin-bottom:15px; border-bottom:2px solid var(--klu-gold); padding-bottom:8px;">Official Admission Fee & Scholarship Estimator</h2>
+        
+        <div class="calculator-grid">
+          <div>
+            <div style="margin-bottom:15px;">
+              <label class="form-group-label" for="calcProgram">1. Select Degree Program</label>
+              <select id="calcProgram" class="form-select-custom"></select>
+            </div>
+
+            <div style="margin-bottom:15px;">
+              <label class="form-group-label">2. Qualifying 10+2 PCM / PCB / Graduation Marks: <span id="calcMarksVal" style="color:var(--klu-crimson); font-weight:800;">85%</span></label>
+              <input type="range" id="calcMarks" min="50" max="100" value="85" style="width:100%;">
+            </div>
+
+            <div style="margin-bottom:15px;">
+              <label class="form-group-label" for="calcJee">3. JEE Main All India Rank (If Applicable for B.Tech)</label>
+              <input type="number" id="calcJee" class="form-input-custom" placeholder="e.g. 15000">
+            </div>
+
+            <div style="margin-bottom:15px;">
+              <label class="form-group-label" for="calcHostel">4. Hostel Room Accommodation Choice</label>
+              <select id="calcHostel" class="form-select-custom">
+                <option value="none">Day Scholar (No Hostel Needed)</option>
+                <option value="5bed">5-Bedded Room (Non-AC) - ₹95,000/yr (Mess Included)</option>
+                <option value="4bed">4-Bedded Room (Non-AC) - ₹1,10,000/yr (Mess Included)</option>
+                <option value="2bed">2-Bedded Room (Non-AC) - ₹1,25,000/yr (Mess Included)</option>
+                <option value="2bed-ac">2-Bedded Room (AC) - ₹1,45,000/yr (Mess Included)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <div style="background-color:#F8F9FA; border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:15px;">
+              <h3 style="font-size:15px; color:var(--klu-navy); font-weight:700; margin-bottom:10px;">Calculated Fee Statement</h3>
+              
+              <table class="official-fee-table">
+                <tbody>
+                  <tr>
+                    <td>Standard Annual Tuition Fee</td>
+                    <td id="resBaseFee" style="font-weight:700;">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Scholarship Scheme Category</td>
+                    <td id="resScholarship" style="color:var(--klu-crimson); font-weight:700;">None</td>
+                  </tr>
+                  <tr>
+                    <td>Net Annual Tuition Fee Payable</td>
+                    <td id="resNetTuition" style="color:#28A745; font-weight:800;">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Soft Skills & Library (Misc Fee)</td>
+                    <td id="resMiscFee" style="font-weight:700;">₹0</td>
+                  </tr>
+                  <tr>
+                    <td>Hostel & Mess Charges</td>
+                    <td id="resHostelFee" style="font-weight:700;">₹0</td>
+                  </tr>
+                  <tr class="fee-total-row">
+                    <td>Estimated Total Annual Fee</td>
+                    <td id="resTotalFee">₹0 / year</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div style="font-size:12px; color:var(--text-muted); margin-top:12px;">
+                * Note: Tuition scholarships decided at the time of admission remain valid for the full duration of study (4 yrs B.Tech / 3 yrs UG / 2 yrs PG) subject to maintaining standard academic progress.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 3: ACADEMIC PROGRAMS OFFERED -->
+    <div id="tabCourses" class="tab-panel">
+      <div class="portal-card" style="padding:20px; margin-bottom:20px;">
+        <div style="display:flex; gap:15px; flex-wrap:wrap;">
+          <input type="text" id="courseSearchInput" class="form-control-input" placeholder="Search course by name, stream or department (e.g. CSE, Law, Nursing, Agriculture, MBA)..." style="flex:1; min-width:260px;">
+          <select id="levelFilter" class="form-select-custom" style="width:200px;">
+            <option value="all">All Academic Levels</option>
+            <option value="Undergraduate">Undergraduate (UG)</option>
+            <option value="Postgraduate">Postgraduate (PG)</option>
+            <option value="Doctoral">Doctoral (Ph.D)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="coursesGrid" class="course-catalog-grid">
+        <!-- Generated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- TAB 4: FREQUENTLY ASKED DOUBTS -->
+    <div id="tabFaq" class="tab-panel">
+      <div class="portal-card" style="padding:25px;">
+        <h2 style="font-size:18px; font-weight:700; color:var(--klu-navy); margin-bottom:15px; border-bottom:2px solid var(--klu-gold); padding-bottom:8px;">Frequently Asked Admission Doubts & Official Rules</h2>
+        <div id="faqListContainer">
+          <!-- Generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="portal-footer">
+    <div class="footer-container">
+      <p><strong>KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION</strong></p>
+      <p>(Deemed to be University Under Section 3 of UGC Act 1956) • Anand Nagar, Krishnankoil-626126, Tamil Nadu, India.</p>
+      <p style="margin-top:10px; color:#A0AEC0; font-size:12px;">Official Admissions & Fee Assistant • Trained on data from <a href="https://www.kalasalingam.ac.in/admissions/" target="_blank">www.kalasalingam.ac.in/admissions/</a></p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="klu_kb_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

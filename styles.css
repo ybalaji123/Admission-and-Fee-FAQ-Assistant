@@ -1,0 +1,682 @@
+/* Kalasalingam Academy of Research and Education (KARE) 
+   Official Admission & Fee Assistant Portal Stylesheet 
+   Refined University Color Scheme (Maroon Crimson, Deep Navy & Gold)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700;800&display=swap');
+
+:root {
+  --klu-navy: #0B2545;
+  --klu-navy-dark: #061629;
+  --klu-crimson: #800000;
+  --klu-crimson-hover: #990000;
+  --klu-crimson-light: #FDF2F2;
+  --klu-gold: #C59B27;
+  --klu-gold-light: #FFFBF0;
+  --bg-light: #F4F6F9;
+  --bg-card: #FFFFFF;
+  --border-color: #DEE2E6;
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* TOP ANNOUNCEMENT STRIP */
+.top-bar {
+  background-color: var(--klu-navy-dark);
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 2px solid var(--klu-gold);
+}
+
+.top-bar-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-links {
+  display: flex;
+  gap: 15px;
+}
+
+.top-links a {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.top-links a:hover {
+  color: var(--klu-gold);
+}
+
+/* MAIN UNIVERSITY BRAND HEADER */
+.header-main {
+  background-color: #FFFFFF;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--klu-navy);
+}
+
+.logo-emblem {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, var(--klu-crimson) 0%, var(--klu-navy) 100%);
+  border: 2px solid var(--klu-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.brand-titles h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--klu-navy);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.brand-titles p {
+  font-size: 12px;
+  color: var(--klu-crimson);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.header-accreditation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accred-badge {
+  background-color: var(--klu-gold-light);
+  border: 1px solid var(--klu-gold);
+  color: #856404;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* NAVIGATION BAR */
+.nav-menu {
+  background-color: var(--klu-navy);
+  border-bottom: 3px solid var(--klu-crimson);
+}
+
+.nav-menu-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.nav-tab-item button {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-tab-item button:hover {
+  background-color: rgba(255,255,255,0.08);
+  color: var(--klu-gold);
+}
+
+.nav-tab-item button.active {
+  background-color: var(--klu-crimson);
+  color: #FFFFFF;
+  border-bottom-color: var(--klu-gold);
+}
+
+.btn-apply-header {
+  background-color: var(--klu-crimson);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--klu-gold);
+}
+
+.btn-apply-header:hover {
+  background-color: var(--klu-crimson-hover);
+}
+
+/* MAIN CONTENT AREA */
+.container {
+  max-width: 1240px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+/* NOTICE BANNER */
+.notice-banner {
+  background: linear-gradient(to right, #FFFFFF, #FFFBF0);
+  border-left: 5px solid var(--klu-crimson);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: var(--shadow-sm);
+}
+
+.notice-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--klu-navy);
+}
+
+.notice-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* TAB PANELS */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* CHATBOT SECTION */
+.chat-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 25px;
+}
+
+@media (max-width: 992px) {
+  .chat-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portal-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-card-header {
+  background-color: var(--klu-navy);
+  color: #FFFFFF;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--klu-gold);
+}
+
+.portal-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge {
+  background-color: #28A745;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.chat-box {
+  height: 480px;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.msg-wrapper {
+  display: flex;
+  gap: 12px;
+  max-width: 88%;
+}
+
+.msg-wrapper.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.msg-avatar-klu {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--klu-navy);
+  color: var(--klu-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+  border: 1px solid var(--klu-gold);
+  flex-shrink: 0;
+}
+
+.msg-wrapper.user .msg-avatar-klu {
+  background: var(--klu-crimson);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.msg-content {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.msg-wrapper.user .msg-content {
+  background-color: var(--klu-navy);
+  color: #FFFFFF;
+  border-color: var(--klu-navy);
+}
+
+.msg-timestamp {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: block;
+}
+
+.msg-wrapper.user .msg-timestamp {
+  color: #A0AEC0;
+}
+
+/* QUICK TOPIC BUTTONS */
+.quick-topics {
+  padding: 12px 20px;
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.topic-btn {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  color: var(--klu-navy);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.topic-btn:hover {
+  background-color: var(--klu-crimson);
+  color: #FFFFFF;
+  border-color: var(--klu-crimson);
+}
+
+/* CHAT INPUT AREA */
+.chat-input-panel {
+  padding: 15px 20px;
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--border-color);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.form-control-input {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-control-input:focus {
+  border-color: var(--klu-crimson);
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+}
+
+.btn-send {
+  background-color: var(--klu-crimson);
+  color: #FFFFFF;
+  border: none;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-send:hover {
+  background-color: var(--klu-crimson-hover);
+}
+
+/* SIDEBAR OFFICIAL PANEL */
+.sidebar-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-widget-header {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--klu-navy);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--klu-gold);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.contact-list-item strong {
+  color: var(--klu-navy);
+}
+
+/* FEE CALCULATOR TABLE STYLE */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+@media (max-width: 868px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group-label {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--klu-navy);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-select-custom, .form-input-custom {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background-color: #FFFFFF;
+  outline: none;
+}
+
+.form-select-custom:focus, .form-input-custom:focus {
+  border-color: var(--klu-crimson);
+}
+
+.official-fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.official-fee-table th, .official-fee-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.official-fee-table th {
+  background-color: var(--klu-navy);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.official-fee-table tr:nth-child(even) {
+  background-color: #F8F9FA;
+}
+
+.fee-total-row {
+  background-color: var(--klu-gold-light) !important;
+  font-weight: 800;
+  color: var(--klu-navy);
+  font-size: 16px;
+}
+
+/* COURSE DIRECTORY CARDS */
+.course-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.university-course-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--klu-navy);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.university-course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-top-color: var(--klu-crimson);
+}
+
+.course-card-head {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--klu-navy);
+  margin-bottom: 8px;
+}
+
+.course-badge-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.badge-tag {
+  background-color: #E9ECEF;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.badge-tag-gold {
+  background-color: var(--klu-gold-light);
+  color: #856404;
+  border: 1px solid var(--klu-gold);
+}
+
+/* FAQ ACCORDION */
+.accordion-item {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  padding: 14px 18px;
+  font-weight: 700;
+  color: var(--klu-navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.accordion-header:hover {
+  background-color: #F8F9FA;
+}
+
+.accordion-body {
+  padding: 15px 18px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: none;
+  background-color: #FCFDFE;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+/* FOOTER */
+.portal-footer {
+  background-color: var(--klu-navy-dark);
+  color: #CBD5E0;
+  padding: 30px 0 20px 0;
+  margin-top: 40px;
+  border-top: 4px solid var(--klu-crimson);
+  font-size: 13px;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.footer-container a {
+  color: var(--klu-gold);
+  text-decoration: none;
+}
