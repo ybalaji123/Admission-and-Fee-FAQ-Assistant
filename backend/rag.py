@@ -24,8 +24,11 @@ from google.genai import types
 from openpyxl import load_workbook
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(PROJECT_ROOT / ".env")
 WORKBOOK_PATH = PROJECT_ROOT / "data" / "KLU_Admission_Data.xlsx"
-CHROMA_PATH = PROJECT_ROOT / "data" / "chroma_db"
+CHROMA_PATH = Path(
+    os.getenv("CHROMA_PATH", str(PROJECT_ROOT / "data" / "chroma_db"))
+).expanduser()
 COLLECTION_NAME = "klu_admissions"
 
 EMBEDDING_BATCH_SIZE = 64
@@ -125,8 +128,6 @@ class KLUAssistant:
     """Build the knowledge index and answer student questions with Gemini RAG."""
 
     def __init__(self) -> None:
-        # Load local settings without replacing any environment variables already set.
-        load_dotenv(PROJECT_ROOT / ".env")
         api_key = os.getenv("GEMINI_API_KEY", "").strip()
         if not api_key:
             raise AssistantNotConfigured("Set GEMINI_API_KEY in the project .env file.")
