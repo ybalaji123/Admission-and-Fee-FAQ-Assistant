@@ -1,0 +1,1 @@
+"""KLU admissions assistant backend."""

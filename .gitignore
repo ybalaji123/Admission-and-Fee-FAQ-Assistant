@@ -1,16 +1,23 @@
-# Python & Bytecode
+# Python and bytecode
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Local secrets and virtual environments
 *.env
-.venv
+.env
+.venv/
 venv/
 
-# IDE & OS
+# IDE and operating system files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# Streamlit
+# Streamlit local settings
 .streamlit/
+
+# Runtime cache and ChromaDB index (rebuildable from the workbook)
+.pytest_cache/
+data/chroma_db/

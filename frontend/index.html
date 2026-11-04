@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f8f6">
+    <meta name="description" content="Ask questions about KLU admissions, programmes, fees, scholarships, and campus accommodation.">
+    <title>KLU Admissions Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="KLU Admissions Assistant home">
+        <img class="brand-banner" src="/static/klu-banner.png" alt="Kalasalingam Academy of Research and Education, including its crest and founder portrait">
+        <span class="brand-copy"><span>Admissions assistant</span></span>
+      </a>
+      <a class="apply-link" href="https://apply.kalasalingam.ac.in/" target="_blank" rel="noreferrer">Apply to KLU <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">KLU Admission and Fee Assistance</h1>
+        <p class="intro-copy">Ask about programmes, admission requirements, fees, scholarships, or hostel options. I’ll look for answers in the KLU information provided.</p>
+      </section>
+
+      <section class="assistant-card" aria-label="Admissions chat">
+        <div class="chat-heading">
+          <div class="heading-avatar" aria-hidden="true"><img src="/static/klu-logo.png" alt=""></div>
+          <div class="heading-copy"><h2>KLU admissions</h2><p><span class="live-dot"></span><span id="statusText">Checking assistant…</span></p></div>
+          <button id="clearButton" class="clear-button" type="button" aria-label="Clear conversation">Clear chat</button>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite" aria-label="Conversation">
+          <article class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true"><img src="/static/klu-logo.png" alt=""></div>
+            <div class="message-content"><p>Hi! I can help you explore KLU admissions. What would you like to know?</p></div>
+          </article>
+        </div>
+
+        <div class="suggestions" aria-label="Suggested questions">
+          <button type="button" data-question="What are the B.Tech CSE fees?">B.Tech fees</button>
+          <button type="button" data-question="What scholarships are available based on 12th marks?">Scholarships</button>
+          <button type="button" data-question="What hostel options and fees are available?">Hostel options</button>
+          <button type="button" data-question="How do I apply for admission?">How to apply</button>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="messageInput">Your question</label>
+          <textarea id="messageInput" name="message" rows="1" maxlength="2000" placeholder="Ask an admissions question…" required></textarea>
+          <button class="send-button" id="sendButton" type="submit" aria-label="Send question"><span>Send</span><span aria-hidden="true">↑</span></button>
+        </form>
+        <p class="fine-print">Answers are based on the available KLU workbook. Please confirm important details with the admissions office.</p>
+      </section>
+
+      <footer class="page-footer">
+        <span>Need to speak with someone?</span>
+        <a href="mailto:admission@klu.ac.in">admission@klu.ac.in</a>
+        <span class="footer-separator">·</span>
+        <a href="tel:+917397760760">+91 7397760760</a>
+      </footer>
+    </main>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
