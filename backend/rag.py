@@ -24,10 +24,10 @@ from google.genai import types
 from openpyxl import load_workbook
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-load_dotenv(PROJECT_ROOT / ".env")
 WORKBOOK_PATH = PROJECT_ROOT / "data" / "KLU_Admission_Data.xlsx"
+load_dotenv(PROJECT_ROOT / ".env")
 CHROMA_PATH = Path(
-    os.getenv("CHROMA_PATH", str(PROJECT_ROOT / "data" / "chroma_db"))
+    os.getenv("CHROMA_PATH") or str(PROJECT_ROOT / "data" / "chroma_db")
 ).expanduser()
 COLLECTION_NAME = "klu_admissions"
 
